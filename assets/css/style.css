@@ -919,6 +919,17 @@ section {
     text-align: center;
 }
 
+.qr-image {
+    width: 180px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: var(--radius-lg);
+    background: var(--white);
+    padding: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .qr-placeholder {
     width: 150px;
     height: 150px;
