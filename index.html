@@ -566,45 +566,58 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
+                    <!-- 
+                        ⚠️ 重要：请将下方 YOUR_EMAIL@example.com 替换为你的真实邮箱
+                        首次提交后，FormSubmit 会发送确认邮件到你的邮箱，点击确认后即可正常接收客户需求
+                    -->
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+                        <!-- FormSubmit 配置 -->
+                        <input type="hidden" name="_subject" value="【新客户需求】来自作品集网站">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://felixtang-only.github.io/learn_py/?submitted=true">
+                        
                         <div class="form-group">
                             <label for="name">您的称呼 *</label>
-                            <input type="text" id="name" name="name" required placeholder="请输入您的称呼">
+                            <input type="text" id="name" name="客户称呼" required placeholder="请输入您的称呼">
                         </div>
                         <div class="form-group">
                             <label for="contact">联系方式 *</label>
-                            <input type="text" id="contact" name="contact" required placeholder="微信/QQ/手机号">
+                            <input type="text" id="contact" name="联系方式" required placeholder="微信/QQ/手机号">
                         </div>
                         <div class="form-group">
                             <label for="projectType">项目类型 *</label>
-                            <select id="projectType" name="projectType" required>
+                            <select id="projectType" name="项目类型" required>
                                 <option value="">请选择项目类型</option>
-                                <option value="website">企业官网</option>
-                                <option value="miniprogram">微信小程序</option>
-                                <option value="ecommerce">电商平台</option>
-                                <option value="h5">H5活动页</option>
-                                <option value="admin">管理系统</option>
-                                <option value="other">其他</option>
+                                <option value="企业官网">企业官网</option>
+                                <option value="微信小程序">微信小程序</option>
+                                <option value="电商平台">电商平台</option>
+                                <option value="H5活动页">H5活动页</option>
+                                <option value="管理系统">管理系统</option>
+                                <option value="其他">其他</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="budget">预算范围</label>
-                            <select id="budget" name="budget">
-                                <option value="">请选择预算范围</option>
-                                <option value="3000">3000以下</option>
-                                <option value="3000-5000">3000-5000</option>
-                                <option value="5000-10000">5000-10000</option>
-                                <option value="10000-20000">10000-20000</option>
-                                <option value="20000+">20000以上</option>
+                            <select id="budget" name="预算范围">
+                                <option value="未选择">请选择预算范围</option>
+                                <option value="3000以下">3000以下</option>
+                                <option value="3000-5000元">3000-5000</option>
+                                <option value="5000-10000元">5000-10000</option>
+                                <option value="10000-20000元">10000-20000</option>
+                                <option value="20000元以上">20000以上</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
                             <label for="description">需求描述 *</label>
-                            <textarea id="description" name="description" rows="4" required placeholder="请简要描述您的项目需求..."></textarea>
+                            <textarea id="description" name="需求描述" rows="4" required placeholder="请简要描述您的项目需求..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">
                             <i class="fas fa-paper-plane"></i> 提交需求
                         </button>
+                        <p class="form-note" style="margin-top: 15px; font-size: 0.85rem; color: #64748b; text-align: center;">
+                            提交后我会在24小时内通过您留下的联系方式与您取得联系
+                        </p>
                     </form>
                 </div>
             </div>

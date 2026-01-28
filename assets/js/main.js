@@ -5,6 +5,19 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // ==================== 
+    // Check for successful form submission 
+    // ====================
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+        // Show success notification
+        setTimeout(() => {
+            showNotification('🎉 提交成功！我会尽快与您联系。', 'success');
+            // Clean up URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }, 500);
+    }
+
+    // ==================== 
     // Navigation 
     // ====================
     const navbar = document.getElementById('navbar');
@@ -150,37 +163,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+        // Get form data for validation
+        const name = document.getElementById('name').value;
+        const contact = document.getElementById('contact').value;
+        const projectType = document.getElementById('projectType').value;
+        const description = document.getElementById('description').value;
 
         // Validate form
-        if (!data.name || !data.contact || !data.projectType || !data.description) {
+        if (!name || !contact || !projectType || !description) {
+            e.preventDefault();
             showNotification('请填写所有必填项', 'error');
             return;
         }
 
-        // Show loading state
+        // Show loading state (form will submit naturally via FormSubmit)
         const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 提交中...';
         submitBtn.disabled = true;
-
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
-            // Reset form
-            contactForm.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-
-            // Show success message
-            showNotification('提交成功！我会尽快与您联系。', 'success');
-        }, 1500);
     });
 
     // ==================== 
