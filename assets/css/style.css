@@ -1424,8 +1424,9 @@ section {
 @media (max-width: 900px) {
     .project-card {
         flex-direction: column;
-        gap: 25px;
+        gap: 20px;
         min-height: auto;
+        padding: 25px;
     }
     
     .project-preview {
@@ -1433,42 +1434,347 @@ section {
     }
     
     .preview-screen {
-        max-width: 350px;
+        max-width: 320px;
     }
     
     .preview-phone {
-        width: 200px;
+        width: 180px;
     }
     
     .phone-inner {
-        min-height: 340px;
+        min-height: 300px;
+    }
+    
+    .project-details h3 {
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 600px) {
     .carousel-container {
-        padding: 0 10px;
+        padding: 0;
+    }
+    
+    .carousel-slide {
+        padding: 5px;
     }
     
     .carousel-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
     }
     
-    .carousel-btn.prev { left: 5px; }
-    .carousel-btn.next { right: 5px; }
+    .carousel-btn.prev { left: 2px; }
+    .carousel-btn.next { right: 2px; }
     
     .project-card {
-        padding: 20px;
+        padding: 15px;
+        gap: 15px;
     }
     
     .project-details h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .project-details > p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .project-tag {
+        padding: 4px 12px;
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+    
+    .project-techs {
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+    
+    .project-techs span {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .project-stats {
+        gap: 15px;
+    }
+    
+    .project-stats .stat {
+        font-size: 0.8rem;
     }
     
     .preview-screen {
-        max-width: 100%;
+        max-width: 280px;
+    }
+    
+    .screen-content {
+        min-height: 200px;
+    }
+    
+    .preview-phone {
+        width: 150px;
+    }
+    
+    .phone-inner {
+        min-height: 250px;
+        border-radius: 18px;
+    }
+    
+    /* Smaller screen content */
+    .site-hero {
+        padding: 20px 15px;
+    }
+    
+    .text-line {
+        height: 8px;
+        margin-bottom: 6px;
+    }
+    
+    .hero-btn {
+        width: 70px;
+        height: 24px;
+    }
+    
+    .site-cards {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .mini-card {
+        width: 45px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    /* Dashboard smaller */
+    .dash-cards {
+        gap: 5px;
+    }
+    
+    .data-card {
+        padding: 6px 4px;
+    }
+    
+    .data-card .label {
+        font-size: 0.5rem;
+    }
+    
+    .data-card .value {
+        font-size: 0.7rem;
+    }
+    
+    .dash-chart {
+        height: 50px;
+        padding: 6px;
+    }
+    
+    .chart-bar {
+        width: 10px;
+    }
+    
+    /* Admin smaller */
+    .sidebar {
+        width: 35px;
+    }
+    
+    .sidebar-logo {
+        font-size: 0.8rem;
+    }
+    
+    .sidebar-menu span {
+        width: 22px;
+        height: 22px;
+        font-size: 0.65rem;
+    }
+    
+    .content-header {
+        font-size: 0.75rem;
+    }
+    
+    .content-stats {
+        gap: 5px;
+    }
+    
+    .stat-item {
+        padding: 5px;
+        font-size: 0.55rem;
+    }
+    
+    .stat-item span {
+        font-size: 0.7rem;
+    }
+    
+    .table-header, .table-row {
+        padding: 4px 5px;
+        font-size: 0.55rem;
+    }
+    
+    /* Edu smaller */
+    .edu-banner {
+        padding: 12px 10px;
+    }
+    
+    .banner-text {
+        font-size: 0.85rem;
+    }
+    
+    .banner-sub {
+        font-size: 0.65rem;
+    }
+    
+    .edu-courses {
+        gap: 6px;
+        padding: 8px;
+    }
+    
+    .course-cover {
+        height: 35px;
+    }
+    
+    .course-name {
+        padding: 5px 5px 2px;
+        font-size: 0.65rem;
+    }
+    
+    .course-meta {
+        padding: 0 5px 5px;
+        font-size: 0.5rem;
+    }
+    
+    /* E-commerce smaller */
+    .app-header {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+    
+    .app-banner {
+        height: 25px;
+    }
+    
+    .app-grid {
+        padding: 8px;
+        gap: 5px;
+    }
+    
+    .grid-item {
+        font-size: 0.8rem;
+    }
+    
+    .app-products {
+        gap: 6px;
+        padding: 8px;
+    }
+    
+    .product-img {
+        height: 35px;
+    }
+    
+    .product-info .name {
+        font-size: 0.6rem;
+    }
+    
+    .product-info .price {
+        font-size: 0.65rem;
+    }
+    
+    .app-tabbar {
+        padding: 6px 0;
+    }
+    
+    .app-tabbar .tab {
+        font-size: 0.8rem;
+    }
+    
+    /* H5 smaller */
+    .h5-preview {
+        padding: 15px;
+    }
+    
+    .h5-title .big {
+        font-size: 1.8rem;
+    }
+    
+    .h5-title .sub {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .h5-wheel {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+    
+    .h5-text {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+    
+    .h5-prizes {
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .h5-prizes span {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+    
+    .h5-btn {
+        padding: 8px 18px;
+        font-size: 0.7rem;
+    }
+    
+    /* Carousel dots */
+    .carousel-dots {
+        margin-top: 15px;
+        gap: 6px;
+    }
+    
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .carousel-dot.active {
+        width: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .project-card {
+        padding: 12px;
+    }
+    
+    .project-details h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-details > p {
+        font-size: 0.85rem;
+    }
+    
+    .preview-screen {
+        max-width: 240px;
+    }
+    
+    .preview-phone {
+        width: 130px;
+    }
+    
+    .phone-inner {
+        min-height: 220px;
+        border-radius: 15px;
+    }
+    
+    .carousel-btn {
+        display: none;
     }
 }
 
