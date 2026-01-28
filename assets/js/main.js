@@ -92,153 +92,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ==================== 
-    // Portfolio Carousel 
+    // Portfolio Swiper 
     // ====================
-    function initCarousel() {
-        const track = document.getElementById('carouselTrack');
-        const slides = document.querySelectorAll('.carousel-slide');
-        const prevBtn = document.getElementById('carouselPrev');
-        const nextBtn = document.getElementById('carouselNext');
-        const dotsContainer = document.getElementById('carouselDots');
-        const dots = document.querySelectorAll('.carousel-dot');
-        
-        if (!track || slides.length === 0) return;
-        
-        let currentIndex = 0;
-        let autoplayInterval;
-        const slideCount = slides.length;
-        
-        // Update carousel position
-        function goToSlide(index) {
-            if (index < 0) index = slideCount - 1;
-            if (index >= slideCount) index = 0;
-            
-            currentIndex = index;
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            
-            // Update dots
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
-            });
-        }
-        
-        // Next slide
-        function nextSlide() {
-            goToSlide(currentIndex + 1);
-        }
-        
-        // Previous slide
-        function prevSlide() {
-            goToSlide(currentIndex - 1);
-        }
-        
-        // Event listeners for buttons
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetAutoplay();
-            });
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetAutoplay();
-            });
-        }
-        
-        // Event listeners for dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                goToSlide(index);
-                resetAutoplay();
-            });
-        });
-        
-        // Touch/swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        track.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        
-        track.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-        
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-                resetAutoplay();
-            }
-        }
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            // Only trigger if carousel is in viewport
-            const carouselRect = track.getBoundingClientRect();
-            const isInViewport = carouselRect.top < window.innerHeight && carouselRect.bottom > 0;
-            
-            if (isInViewport) {
-                if (e.key === 'ArrowLeft') {
-                    prevSlide();
-                    resetAutoplay();
-                } else if (e.key === 'ArrowRight') {
-                    nextSlide();
-                    resetAutoplay();
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.portfolio-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
                 }
             }
         });
-        
-        // Autoplay
-        function startAutoplay() {
-            autoplayInterval = setInterval(nextSlide, 5000);
-        }
-        
-        function resetAutoplay() {
-            clearInterval(autoplayInterval);
-            startAutoplay();
-        }
-        
-        // Pause autoplay on hover
-        const carouselContainer = document.querySelector('.carousel-container');
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => {
-                clearInterval(autoplayInterval);
-            });
-            
-            carouselContainer.addEventListener('mouseleave', () => {
-                startAutoplay();
-            });
-        }
-        
-        // Start autoplay
-        startAutoplay();
-        
-        // Intersection Observer to pause autoplay when not visible
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    startAutoplay();
-                } else {
-                    clearInterval(autoplayInterval);
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        observer.observe(track);
     }
-    
-    initCarousel();
 
     // ==================== 
     // Smooth Scroll 
@@ -416,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ====================
     function initScrollAnimation() {
         const animatedElements = document.querySelectorAll(
-            '.service-card, .carousel-slide, .process-item, .skill-card'
+            '.service-card, .process-item, .skill-card'
         );
 
         const observer = new IntersectionObserver((entries) => {

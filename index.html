@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -301,340 +303,211 @@
                 <p class="section-desc">精选项目案例，展示专业实力</p>
             </div>
             
-            <!-- 轮播容器 -->
-            <div class="carousel-container">
-                <!-- 轮播控制按钮 -->
-                <button class="carousel-btn prev" id="carouselPrev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next" id="carouselNext">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <div class="carousel-wrapper">
-                    <div class="carousel-track" id="carouselTrack">
-                        <!-- 案例1: 企业官网 -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-preview">
-                                    <div class="preview-screen website-preview">
-                                        <div class="screen-header">
-                                            <div class="header-dots"><span></span><span></span><span></span></div>
-                                            <div class="header-url">tech-company.com</div>
-                                        </div>
-                                        <div class="screen-content">
-                                            <div class="site-nav">
-                                                <span class="site-logo">TechCorp</span>
-                                                <div class="site-menu"><span></span><span></span><span></span></div>
-                                            </div>
-                                            <div class="site-hero">
-                                                <div class="hero-text">
-                                                    <div class="text-line lg"></div>
-                                                    <div class="text-line md"></div>
-                                                    <div class="text-line sm"></div>
-                                                </div>
-                                                <div class="hero-btn"></div>
-                                            </div>
-                                            <div class="site-cards">
-                                                <div class="mini-card"><i class="fas fa-cloud"></i></div>
-                                                <div class="mini-card"><i class="fas fa-shield-alt"></i></div>
-                                                <div class="mini-card"><i class="fas fa-rocket"></i></div>
-                                            </div>
-                                        </div>
+            <!-- Swiper 轮播 -->
+            <div class="swiper portfolio-swiper">
+                <div class="swiper-wrapper">
+                    <!-- 案例1: 企业官网 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <div class="preview-mockup website-mock">
+                                    <div class="mock-header">
+                                        <span class="dots"><i></i><i></i><i></i></span>
+                                        <span class="url">tech-company.com</span>
                                     </div>
-                                </div>
-                                <div class="project-details">
-                                    <span class="project-tag">企业官网</span>
-                                    <h3>科技公司品牌官网</h3>
-                                    <p>响应式企业官网设计开发，现代简约风格，完美展示企业形象与核心产品服务，支持多端适配</p>
-                                    <div class="project-techs">
-                                        <span>Vue 3</span>
-                                        <span>TypeScript</span>
-                                        <span>Vite</span>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="stat"><i class="fas fa-eye"></i> 50万+ PV</div>
-                                        <div class="stat"><i class="fas fa-clock"></i> 2周交付</div>
+                                    <div class="mock-body">
+                                        <div class="mock-nav"></div>
+                                        <div class="mock-hero">
+                                            <div class="mock-title"></div>
+                                            <div class="mock-subtitle"></div>
+                                            <div class="mock-btn"></div>
+                                        </div>
+                                        <div class="mock-features">
+                                            <span><i class="fas fa-cloud"></i></span>
+                                            <span><i class="fas fa-shield-alt"></i></span>
+                                            <span><i class="fas fa-rocket"></i></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <span class="tag">企业官网</span>
+                                <h3>科技公司品牌官网</h3>
+                                <p>响应式企业官网，现代简约风格，展示企业形象与核心产品服务</p>
+                                <div class="techs"><span>Vue 3</span><span>TypeScript</span><span>Vite</span></div>
+                            </div>
                         </div>
-                        
-                        <!-- 案例2: 电商小程序 -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-preview">
-                                    <div class="preview-phone">
-                                        <div class="phone-inner ecommerce-preview">
-                                            <div class="app-header green">
-                                                <i class="fas fa-leaf"></i>
-                                                <span>鲜果优选</span>
-                                            </div>
-                                            <div class="app-banner"></div>
-                                            <div class="app-grid">
-                                                <div class="grid-item"><i class="fas fa-apple-alt"></i></div>
-                                                <div class="grid-item"><i class="fas fa-carrot"></i></div>
-                                                <div class="grid-item"><i class="fas fa-fish"></i></div>
-                                                <div class="grid-item"><i class="fas fa-drumstick-bite"></i></div>
-                                            </div>
-                                            <div class="app-products">
-                                                <div class="product-item">
-                                                    <div class="product-img orange"></div>
-                                                    <div class="product-info">
-                                                        <span class="name">红富士苹果</span>
-                                                        <span class="price">¥12.9</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item">
-                                                    <div class="product-img purple"></div>
-                                                    <div class="product-info">
-                                                        <span class="name">智利蓝莓</span>
-                                                        <span class="price">¥29.9</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="app-tabbar">
-                                                <div class="tab active"><i class="fas fa-home"></i></div>
-                                                <div class="tab"><i class="fas fa-th-large"></i></div>
-                                                <div class="tab"><i class="fas fa-shopping-cart"></i></div>
-                                                <div class="tab"><i class="fas fa-user"></i></div>
-                                            </div>
+                    </div>
+                    
+                    <!-- 案例2: 电商小程序 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <div class="preview-mockup phone-mock">
+                                    <div class="phone-screen ecommerce-mock">
+                                        <div class="app-top green"></div>
+                                        <div class="app-cats">
+                                            <span><i class="fas fa-apple-alt"></i></span>
+                                            <span><i class="fas fa-carrot"></i></span>
+                                            <span><i class="fas fa-fish"></i></span>
+                                            <span><i class="fas fa-drumstick-bite"></i></span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="project-details">
-                                    <span class="project-tag">微信小程序</span>
-                                    <h3>生鲜电商小程序</h3>
-                                    <p>社区团购小程序，支持在线下单、配送到家，集成微信支付、会员系统、优惠券等完整电商功能</p>
-                                    <div class="project-techs">
-                                        <span>小程序原生</span>
-                                        <span>云开发</span>
-                                        <span>微信支付</span>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="stat"><i class="fas fa-users"></i> 10万+ 用户</div>
-                                        <div class="stat"><i class="fas fa-shopping-bag"></i> 日均500单</div>
+                                        <div class="app-items">
+                                            <div class="item"><div class="img orange"></div><span>¥12.9</span></div>
+                                            <div class="item"><div class="img purple"></div><span>¥29.9</span></div>
+                                        </div>
+                                        <div class="app-bar">
+                                            <i class="fas fa-home"></i>
+                                            <i class="fas fa-th-large"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-user"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <span class="tag">微信小程序</span>
+                                <h3>生鲜电商小程序</h3>
+                                <p>社区团购小程序，支持在线下单、配送到家，集成微信支付</p>
+                                <div class="techs"><span>小程序</span><span>云开发</span><span>微信支付</span></div>
+                            </div>
                         </div>
-                        
-                        <!-- 案例3: 数据大屏 -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-preview">
-                                    <div class="preview-screen dashboard-preview">
-                                        <div class="screen-header dark">
-                                            <div class="header-dots"><span></span><span></span><span></span></div>
-                                            <div class="header-url">dashboard.company.com</div>
-                                        </div>
-                                        <div class="screen-content dark">
-                                            <div class="dash-title">实时数据监控中心</div>
-                                            <div class="dash-cards">
-                                                <div class="data-card">
-                                                    <span class="label">今日订单</span>
-                                                    <span class="value">12,847</span>
-                                                    <span class="trend up">↑ 23.5%</span>
-                                                </div>
-                                                <div class="data-card">
-                                                    <span class="label">销售额</span>
-                                                    <span class="value">¥856K</span>
-                                                    <span class="trend up">↑ 18.2%</span>
-                                                </div>
-                                                <div class="data-card">
-                                                    <span class="label">活跃用户</span>
-                                                    <span class="value">45,621</span>
-                                                    <span class="trend up">↑ 12.8%</span>
-                                                </div>
-                                            </div>
-                                            <div class="dash-chart">
-                                                <div class="chart-bar" style="--h: 60%"></div>
-                                                <div class="chart-bar" style="--h: 80%"></div>
-                                                <div class="chart-bar" style="--h: 45%"></div>
-                                                <div class="chart-bar" style="--h: 90%"></div>
-                                                <div class="chart-bar" style="--h: 70%"></div>
-                                                <div class="chart-bar" style="--h: 85%"></div>
-                                            </div>
-                                        </div>
+                    </div>
+                    
+                    <!-- 案例3: 数据大屏 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <div class="preview-mockup website-mock dark-mock">
+                                    <div class="mock-header dark">
+                                        <span class="dots"><i></i><i></i><i></i></span>
+                                        <span class="url">dashboard.company.com</span>
                                     </div>
-                                </div>
-                                <div class="project-details">
-                                    <span class="project-tag">数据可视化</span>
-                                    <h3>企业数据监控大屏</h3>
-                                    <p>实时数据可视化大屏，支持多维度数据展示、实时刷新、自适应各尺寸屏幕，打造震撼视觉效果</p>
-                                    <div class="project-techs">
-                                        <span>Vue 3</span>
-                                        <span>ECharts</span>
-                                        <span>WebSocket</span>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="stat"><i class="fas fa-chart-line"></i> 实时刷新</div>
-                                        <div class="stat"><i class="fas fa-desktop"></i> 大屏适配</div>
+                                    <div class="mock-body dashboard-body">
+                                        <div class="dash-row">
+                                            <div class="dash-box"><span>12,847</span><small>订单</small></div>
+                                            <div class="dash-box"><span>¥856K</span><small>销售额</small></div>
+                                            <div class="dash-box"><span>45,621</span><small>用户</small></div>
+                                        </div>
+                                        <div class="dash-bars">
+                                            <i style="height:60%"></i>
+                                            <i style="height:80%"></i>
+                                            <i style="height:45%"></i>
+                                            <i style="height:90%"></i>
+                                            <i style="height:70%"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <span class="tag">数据可视化</span>
+                                <h3>企业数据监控大屏</h3>
+                                <p>实时数据可视化大屏，多维度数据展示，自适应各尺寸屏幕</p>
+                                <div class="techs"><span>Vue 3</span><span>ECharts</span><span>WebSocket</span></div>
+                            </div>
                         </div>
-                        
-                        <!-- 案例4: H5活动页 -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-preview">
-                                    <div class="preview-phone">
-                                        <div class="phone-inner h5-preview">
-                                            <div class="h5-bg-pattern"></div>
-                                            <div class="h5-title">
-                                                <span class="big">双11</span>
-                                                <span class="sub">狂欢盛典</span>
-                                            </div>
-                                            <div class="h5-wheel">
-                                                <i class="fas fa-gift"></i>
-                                            </div>
-                                            <div class="h5-text">点击抽奖</div>
-                                            <div class="h5-prizes">
-                                                <span><i class="fas fa-ticket-alt"></i></span>
-                                                <span><i class="fas fa-coins"></i></span>
-                                                <span><i class="fas fa-box"></i></span>
-                                            </div>
-                                            <div class="h5-btn">分享给好友</div>
+                    </div>
+                    
+                    <!-- 案例4: H5活动页 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <div class="preview-mockup phone-mock">
+                                    <div class="phone-screen h5-mock">
+                                        <div class="h5-head">双11</div>
+                                        <div class="h5-sub">狂欢盛典</div>
+                                        <div class="h5-prize"><i class="fas fa-gift"></i></div>
+                                        <div class="h5-actions">
+                                            <span><i class="fas fa-ticket-alt"></i></span>
+                                            <span><i class="fas fa-coins"></i></span>
+                                            <span><i class="fas fa-box"></i></span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="project-details">
-                                    <span class="project-tag">H5活动页</span>
-                                    <h3>双11互动营销活动</h3>
-                                    <p>品牌营销H5活动页，包含抽奖转盘、分享裂变、排行榜等功能，活动期间参与人数突破10万+</p>
-                                    <div class="project-techs">
-                                        <span>HTML5</span>
-                                        <span>CSS3动画</span>
-                                        <span>Canvas</span>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="stat"><i class="fas fa-users"></i> 10万+ 参与</div>
-                                        <div class="stat"><i class="fas fa-share-alt"></i> 3万+ 分享</div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <span class="tag">H5活动页</span>
+                                <h3>双11互动营销活动</h3>
+                                <p>品牌营销H5活动页，包含抽奖、分享裂变，参与人数10万+</p>
+                                <div class="techs"><span>HTML5</span><span>CSS3动画</span><span>Canvas</span></div>
+                            </div>
                         </div>
-                        
-                        <!-- 案例5: 管理后台 -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-preview">
-                                    <div class="preview-screen admin-preview">
-                                        <div class="screen-header">
-                                            <div class="header-dots"><span></span><span></span><span></span></div>
-                                            <div class="header-url">admin.ecommerce.com</div>
+                    </div>
+                    
+                    <!-- 案例5: 管理后台 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <div class="preview-mockup website-mock">
+                                    <div class="mock-header">
+                                        <span class="dots"><i></i><i></i><i></i></span>
+                                        <span class="url">admin.ecommerce.com</span>
+                                    </div>
+                                    <div class="mock-body admin-body">
+                                        <div class="admin-side">
+                                            <i class="fas fa-home"></i>
+                                            <i class="fas fa-box"></i>
+                                            <i class="fas fa-users"></i>
+                                            <i class="fas fa-cog"></i>
                                         </div>
-                                        <div class="screen-content with-sidebar">
-                                            <div class="sidebar">
-                                                <div class="sidebar-logo"><i class="fas fa-store"></i></div>
-                                                <div class="sidebar-menu">
-                                                    <span class="active"><i class="fas fa-home"></i></span>
-                                                    <span><i class="fas fa-shopping-bag"></i></span>
-                                                    <span><i class="fas fa-users"></i></span>
-                                                    <span><i class="fas fa-chart-bar"></i></span>
-                                                </div>
+                                        <div class="admin-main">
+                                            <div class="admin-cards">
+                                                <div><span>28</span>待处理</div>
+                                                <div><span>156</span>发货中</div>
+                                                <div><span>1.2K</span>已完成</div>
                                             </div>
-                                            <div class="main-content">
-                                                <div class="content-header">订单管理</div>
-                                                <div class="content-stats">
-                                                    <div class="stat-item"><span>28</span>待处理</div>
-                                                    <div class="stat-item"><span>156</span>已发货</div>
-                                                    <div class="stat-item"><span>1,247</span>已完成</div>
-                                                </div>
-                                                <div class="content-table">
-                                                    <div class="table-header">
-                                                        <span>订单号</span><span>客户</span><span>金额</span><span>状态</span>
-                                                    </div>
-                                                    <div class="table-row">
-                                                        <span>#20260128</span><span>张三</span><span>¥299</span><span class="tag yellow">待发货</span>
-                                                    </div>
-                                                    <div class="table-row">
-                                                        <span>#20260127</span><span>李四</span><span>¥599</span><span class="tag green">已发货</span>
-                                                    </div>
-                                                </div>
+                                            <div class="admin-list">
+                                                <div class="row"></div>
+                                                <div class="row"></div>
+                                                <div class="row"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="project-details">
-                                    <span class="project-tag">管理系统</span>
-                                    <h3>电商管理后台</h3>
-                                    <p>功能完善的电商后台管理系统，包含订单管理、商品管理、用户管理、数据统计等核心模块</p>
-                                    <div class="project-techs">
-                                        <span>React</span>
-                                        <span>Ant Design</span>
-                                        <span>Redux</span>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="stat"><i class="fas fa-puzzle-piece"></i> 20+ 模块</div>
-                                        <div class="stat"><i class="fas fa-clock"></i> 4周交付</div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <span class="tag">管理系统</span>
+                                <h3>电商管理后台</h3>
+                                <p>功能完善的电商后台，包含订单、商品、用户、数据统计等模块</p>
+                                <div class="techs"><span>React</span><span>Ant Design</span><span>Redux</span></div>
+                            </div>
                         </div>
-                        
-                        <!-- 案例6: 在线教育 -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-preview">
-                                    <div class="preview-screen edu-preview">
-                                        <div class="screen-header">
-                                            <div class="header-dots"><span></span><span></span><span></span></div>
-                                            <div class="header-url">edu-platform.com</div>
-                                        </div>
-                                        <div class="screen-content">
-                                            <div class="edu-nav">
-                                                <span class="edu-logo"><i class="fas fa-graduation-cap"></i> 智学云</span>
-                                                <div class="edu-search"><i class="fas fa-search"></i></div>
-                                            </div>
-                                            <div class="edu-banner">
-                                                <div class="banner-text">发现你的学习潜能</div>
-                                                <div class="banner-sub">10000+ 精品课程</div>
-                                            </div>
-                                            <div class="edu-courses">
-                                                <div class="course-card purple">
-                                                    <div class="course-cover"></div>
-                                                    <div class="course-name">Web前端开发</div>
-                                                    <div class="course-meta">128课时 · 2.3万人</div>
-                                                </div>
-                                                <div class="course-card pink">
-                                                    <div class="course-cover"></div>
-                                                    <div class="course-name">UI设计入门</div>
-                                                    <div class="course-meta">86课时 · 1.8万人</div>
-                                                </div>
-                                            </div>
+                    </div>
+                    
+                    <!-- 案例6: 在线教育 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <div class="preview-mockup website-mock">
+                                    <div class="mock-header">
+                                        <span class="dots"><i></i><i></i><i></i></span>
+                                        <span class="url">edu-platform.com</span>
+                                    </div>
+                                    <div class="mock-body edu-body">
+                                        <div class="edu-top"></div>
+                                        <div class="edu-cards">
+                                            <div class="edu-card purple"></div>
+                                            <div class="edu-card pink"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="project-details">
-                                    <span class="project-tag">在线教育</span>
-                                    <h3>K12在线学习平台</h3>
-                                    <p>在线教育平台，支持直播课、录播课、题库练习、学习进度追踪、师生互动等完整教学功能</p>
-                                    <div class="project-techs">
-                                        <span>React</span>
-                                        <span>Node.js</span>
-                                        <span>WebRTC</span>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="stat"><i class="fas fa-book"></i> 1000+ 课程</div>
-                                        <div class="stat"><i class="fas fa-users"></i> 5万+ 学员</div>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="tag">在线教育</span>
+                                <h3>K12在线学习平台</h3>
+                                <p>在线教育平台，支持直播课、录播课、题库练习等完整功能</p>
+                                <div class="techs"><span>React</span><span>Node.js</span><span>WebRTC</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 轮播指示器 -->
-                <div class="carousel-dots" id="carouselDots">
-                    <span class="carousel-dot active" data-index="0"></span>
-                    <span class="carousel-dot" data-index="1"></span>
-                    <span class="carousel-dot" data-index="2"></span>
-                    <span class="carousel-dot" data-index="3"></span>
-                    <span class="carousel-dot" data-index="4"></span>
-                    <span class="carousel-dot" data-index="5"></span>
-                </div>
+                <!-- 分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -862,6 +735,8 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
