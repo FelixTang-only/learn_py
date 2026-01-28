@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="专业前端开发者 - 8年经验，专注网站开发、小程序开发、H5页面制作">
+    <meta name="keywords" content="前端开发,网站开发,小程序开发,H5开发,外包接单">
+    <title>Felix Tang | 资深前端开发工程师 - 网站&小程序定制开发</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">Felix Tang</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#services">服务内容</a></li>
+                <li><a href="#portfolio">作品案例</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">💻 专业前端开发</span>
+                    <h1 class="hero-title">
+                        <span class="greeting">你好，我是</span>
+                        <span class="name">Felix Tang</span>
+                        <span class="role">资深前端开发工程师</span>
+                    </h1>
+                    <p class="hero-desc">
+                        8年前端开发经验，专注于<strong>企业官网</strong>、<strong>电商平台</strong>、<strong>微信小程序</strong>、<strong>H5活动页</strong>等项目开发。
+                        提供从设计到上线的一站式服务，助力您的业务快速上线！
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">年经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">项目案例</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">客户好评</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-comments"></i> 立即咨询
+                        </a>
+                        <a href="#portfolio" class="btn btn-secondary">
+                            <i class="fas fa-briefcase"></i> 查看案例
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="window-title">developer.js</span>
+                        </div>
+                        <div class="window-body">
+                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Felix Tang"</span>,
+  <span class="property">experience</span>: <span class="string">"8 years"</span>,
+  <span class="property">skills</span>: [
+    <span class="string">"Vue.js"</span>, <span class="string">"React"</span>,
+    <span class="string">"小程序"</span>, <span class="string">"Node.js"</span>
+  ],
+  <span class="property">passion</span>: <span class="string">"创造优秀产品"</span>,
+  <span class="method">createProject</span>() {
+    <span class="keyword">return</span> <span class="string">"🚀 完美交付!"</span>;
+  }
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>向下滚动</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">关于我</h2>
+                <p class="section-desc">8年深耕前端领域，用代码创造价值</p>
+            </div>
+            <div class="about-content">
+                <div class="about-info">
+                    <h3>专业 · 高效 · 可靠</h3>
+                    <p>
+                        我是一名拥有8年前端开发经验的工程师，曾就职于多家知名互联网公司，
+                        参与过电商、金融、教育、医疗等多个行业的项目开发。
+                    </p>
+                    <p>
+                        熟练掌握 Vue.js、React、微信小程序等主流技术栈，
+                        能够独立完成从需求分析、UI设计、前端开发到项目部署的全流程工作。
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>代码规范，易于维护</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>响应式设计，多端适配</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>性能优化，加载快速</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>沟通顺畅，按时交付</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <h4>Vue.js</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4>React</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <h4>小程序</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h4>Node.js</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4>HTML5/CSS3</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h4>TypeScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务内容 -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Services</span>
+                <h2 class="section-title">服务内容</h2>
+                <p class="section-desc">提供全方位的前端开发服务</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>企业官网开发</h3>
+                    <p>响应式企业官网、品牌展示网站、集团门户网站，展现企业形象，提升品牌价值。</p>
+                    <ul class="service-features">
+                        <li>响应式设计</li>
+                        <li>SEO优化</li>
+                        <li>后台管理系统</li>
+                    </ul>
+                    <span class="service-price">¥3000起</span>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-tag">热门</div>
+                    <div class="service-icon">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h3>微信小程序开发</h3>
+                    <p>商城小程序、预约小程序、企业展示小程序，快速触达微信10亿用户。</p>
+                    <ul class="service-features">
+                        <li>原生开发/Uniapp</li>
+                        <li>支付功能集成</li>
+                        <li>数据统计分析</li>
+                    </ul>
+                    <span class="service-price">¥5000起</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>电商平台开发</h3>
+                    <p>B2C商城、多商户平台、社交电商，助力企业数字化转型。</p>
+                    <ul class="service-features">
+                        <li>购物车系统</li>
+                        <li>订单管理</li>
+                        <li>营销活动模块</li>
+                    </ul>
+                    <span class="service-price">¥8000起</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>H5活动页开发</h3>
+                    <p>营销活动页、互动游戏、宣传长页，助力品牌传播与用户增长。</p>
+                    <ul class="service-features">
+                        <li>炫酷动画效果</li>
+                        <li>社交分享功能</li>
+                        <li>数据埋点统计</li>
+                    </ul>
+                    <span class="service-price">¥2000起</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>管理后台开发</h3>
+                    <p>企业管理系统、数据可视化大屏、业务管理平台，提升企业运营效率。</p>
+                    <ul class="service-features">
+                        <li>权限管理系统</li>
+                        <li>数据图表展示</li>
+                        <li>报表导出功能</li>
+                    </ul>
+                    <span class="service-price">¥6000起</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>网站维护优化</h3>
+                    <p>旧网站改版、性能优化、bug修复、功能迭代，让网站焕发新生。</p>
+                    <ul class="service-features">
+                        <li>性能优化</li>
+                        <li>兼容性修复</li>
+                        <li>功能升级</li>
+                    </ul>
+                    <span class="service-price">¥500起</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品案例 -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">作品案例</h2>
+                <p class="section-desc">精选部分项目案例展示</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="website">网站开发</button>
+                <button class="filter-btn" data-filter="miniprogram">小程序</button>
+                <button class="filter-btn" data-filter="h5">H5页面</button>
+                <button class="filter-btn" data-filter="admin">管理系统</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- 案例1 -->
+                <div class="portfolio-item" data-category="website">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="portfolio-btn"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>某科技公司官网</h3>
+                        <p>响应式企业官网，展示公司产品与服务</p>
+                        <div class="portfolio-tags">
+                            <span>Vue.js</span>
+                            <span>响应式</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 案例2 -->
+                <div class="portfolio-item" data-category="miniprogram">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="portfolio-btn"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>生鲜电商小程序</h3>
+                        <p>社区团购小程序，支持在线下单配送</p>
+                        <div class="portfolio-tags">
+                            <span>小程序</span>
+                            <span>电商</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 案例3 -->
+                <div class="portfolio-item" data-category="h5">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="portfolio-btn"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>双十一互动游戏</h3>
+                        <p>品牌营销H5活动页，参与人数10万+</p>
+                        <div class="portfolio-tags">
+                            <span>H5</span>
+                            <span>游戏</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 案例4 -->
+                <div class="portfolio-item" data-category="admin">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="portfolio-btn"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>数据可视化大屏</h3>
+                        <p>企业数据监控大屏，实时展示业务数据</p>
+                        <div class="portfolio-tags">
+                            <span>Vue.js</span>
+                            <span>ECharts</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 案例5 -->
+                <div class="portfolio-item" data-category="miniprogram">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="portfolio-btn"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>美容预约小程序</h3>
+                        <p>美容院在线预约系统，会员管理</p>
+                        <div class="portfolio-tags">
+                            <span>小程序</span>
+                            <span>预约系统</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 案例6 -->
+                <div class="portfolio-item" data-category="website">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="portfolio-btn"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-btn"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>在线教育平台</h3>
+                        <p>K12在线学习平台，支持直播录播</p>
+                        <div class="portfolio-tags">
+                            <span>React</span>
+                            <span>教育</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作流程 -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Process</span>
+                <h2 class="section-title">合作流程</h2>
+                <p class="section-desc">透明高效的项目合作流程</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-item">
+                    <div class="process-icon">
+                        <span>1</span>
+                    </div>
+                    <div class="process-content">
+                        <h3>需求沟通</h3>
+                        <p>详细了解您的项目需求，提供专业建议和方案</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <span>2</span>
+                    </div>
+                    <div class="process-content">
+                        <h3>报价确认</h3>
+                        <p>根据需求提供详细报价，确认开发周期</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <span>3</span>
+                    </div>
+                    <div class="process-content">
+                        <h3>签订合同</h3>
+                        <p>签订正式合同，支付首期款项</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <span>4</span>
+                    </div>
+                    <div class="process-content">
+                        <h3>开发制作</h3>
+                        <p>按计划进行开发，定期汇报进度</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <span>5</span>
+                    </div>
+                    <div class="process-content">
+                        <h3>测试验收</h3>
+                        <p>完成开发后进行测试，您确认验收</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <span>6</span>
+                    </div>
+                    <div class="process-content">
+                        <h3>交付上线</h3>
+                        <p>项目交付上线，提供售后技术支持</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">联系我</h2>
+                <p class="section-desc">有项目需求？立即联系我获取报价</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>微信</h4>
+                            <p>FelixTang_Dev</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-qq"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>QQ</h4>
+                            <p>123456789</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>邮箱</h4>
+                            <p>felix@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>电话</h4>
+                            <p>138-xxxx-xxxx</p>
+                        </div>
+                    </div>
+                    <div class="contact-qr">
+                        <div class="qr-placeholder">
+                            <i class="fas fa-qrcode"></i>
+                            <p>微信二维码</p>
+                        </div>
+                        <p>扫码添加微信，快速沟通</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">您的称呼 *</label>
+                            <input type="text" id="name" name="name" required placeholder="请输入您的称呼">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">联系方式 *</label>
+                            <input type="text" id="contact" name="contact" required placeholder="微信/QQ/手机号">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectType">项目类型 *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">请选择项目类型</option>
+                                <option value="website">企业官网</option>
+                                <option value="miniprogram">微信小程序</option>
+                                <option value="ecommerce">电商平台</option>
+                                <option value="h5">H5活动页</option>
+                                <option value="admin">管理系统</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">预算范围</label>
+                            <select id="budget" name="budget">
+                                <option value="">请选择预算范围</option>
+                                <option value="3000">3000以下</option>
+                                <option value="3000-5000">3000-5000</option>
+                                <option value="5000-10000">5000-10000</option>
+                                <option value="10000-20000">10000-20000</option>
+                                <option value="20000+">20000以上</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="description">需求描述 *</label>
+                            <textarea id="description" name="description" rows="4" required placeholder="请简要描述您的项目需求..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> 提交需求
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">&lt;/&gt;</span>
+                        <span class="logo-text">Felix Tang</span>
+                    </a>
+                    <p>专业前端开发，用代码创造价值</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我</a></li>
+                        <li><a href="#services">服务内容</a></li>
+                        <li><a href="#portfolio">作品案例</a></li>
+                        <li><a href="#contact">联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>服务内容</h4>
+                    <ul>
+                        <li>企业官网开发</li>
+                        <li>微信小程序开发</li>
+                        <li>电商平台开发</li>
+                        <li>H5活动页开发</li>
+                        <li>管理系统开发</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><i class="fab fa-weixin"></i> FelixTang_Dev</li>
+                        <li><i class="fas fa-envelope"></i> felix@example.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Felix Tang. All rights reserved. | 专业前端开发服务</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
