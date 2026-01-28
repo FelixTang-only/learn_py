@@ -164,13 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     contactForm.addEventListener('submit', function(e) {
         // Get form data for validation
-        const name = document.getElementById('name').value;
-        const contact = document.getElementById('contact').value;
+        const userName = document.getElementById('userName').value.trim();
+        const userContact = document.getElementById('userContact').value.trim();
         const projectType = document.getElementById('projectType').value;
-        const description = document.getElementById('description').value;
+        const description = document.getElementById('description').value.trim();
 
         // Validate form
-        if (!name || !contact || !projectType || !description) {
+        if (!userName || !userContact || !projectType || !description) {
             e.preventDefault();
             showNotification('请填写所有必填项', 'error');
             return;
