@@ -1,0 +1,43 @@
+---
+description: Python 编码规范（agent 编码时遵循）
+globs: **/*.py
+alwaysApply: false
+---
+
+# Python 编码规范
+
+- 遵循 PEP 8：4 空格缩进，禁止使用 Tab；行长度控制在 79 字符以内。
+- 命名：变量/函数用 `snake_case`，类用 `PascalCase`，常量用 `UPPER_CASE`。
+- 不要遮蔽内置名（如 `sum`、`list`、`dict`、`input`），用 `total`、`items` 等替代。
+
+## 类型与比较
+
+```python
+# ❌ BAD：str 和 int 直接比较会报错
+age = input("age: ")
+if age > 18:
+    ...
+
+# ✅ GOOD：先做类型转换
+age = int(input("age: "))
+if age > 18:
+    ...
+```
+
+## 可移植性
+
+- 不要硬编码本机绝对路径（如 `/Users/apple/...`）。用相对路径或 `pathlib` / `os.path`。
+
+```python
+# ❌ BAD
+sys.path.append("/Users/apple/Work/learn_py")
+
+# ✅ GOOD
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+```
+
+## 其他
+
+- 每个模块保留必要注释；删除大段无用的注释掉的代码。
+- 网络请求要设置 `timeout` 并检查返回状态，避免无限阻塞。
