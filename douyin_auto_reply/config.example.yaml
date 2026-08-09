@@ -1,0 +1,37 @@
+# Copy to config.yaml and edit before running:
+#   cp config.example.yaml config.yaml
+
+poll_interval_seconds: 60
+action_delay_ms: [800, 2000]
+headless: false
+enable_comments: true
+enable_messages: true
+skip_own_replies: true
+
+# Browser profile directory (login state). Relative to project root.
+profile_dir: ".playwright/douyin-profile"
+db_path: "data/replies.db"
+
+urls:
+  creator: "https://creator.douyin.com/"
+  comments: "https://creator.douyin.com/creator-micro/interactive/comment"
+  messages: "https://www.douyin.com/"
+
+# Rules are matched top-to-bottom; first hit wins.
+rules:
+  - keywords: ["价格", "多少钱", "怎么买"]
+    replies: ["私信发你详情哈~", "你好，具体可以看主页置顶～"]
+  - keywords: ["谢谢", "感谢"]
+    replies: ["不客气，感谢支持！"]
+  - keywords: ["你好", "在吗"]
+    replies: ["你好呀，有什么可以帮你的吗？"]
+
+default_replies:
+  - "收到，谢谢关注～"
+  - "感谢留言，看到会尽快回复哦"
+
+# Skip comments/messages containing these words
+blacklist_keywords:
+  - "加微信"
+  - "代购"
+  - "刷粉"
