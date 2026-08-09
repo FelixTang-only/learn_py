@@ -1,0 +1,14 @@
+# Local secrets & runtime state
+config.toml
+config.yaml
+.playwright/
+data/
+*.db
+*.log
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+.env
+.DS_Store
