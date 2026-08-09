@@ -1,6 +1,6 @@
 # 抖音自动回复（评论 + 私信）
 
-基于 **Playwright** 浏览器自动化，按 `config.yaml` 中的 **关键词模板** 自动回复：
+基于 **Playwright** 浏览器自动化，按 `config.toml` 中的 **关键词模板** 自动回复：
 
 - 自己作品下的评论（创作者中心）
 - 新私信（抖音 Web 消息）
@@ -14,21 +14,27 @@
 
 ## 环境要求
 
-- Python 3.10+
+- Python 3.11+（推荐 3.11–3.13；3.15 也可，配置用标准库 tomllib，无需编译 PyYAML）
 - 可弹出浏览器的桌面环境（首次登录必须有界面）
 
 ## 安装
 
 ```bash
 cd douyin_auto_reply
-python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# macOS / Linux:
+# source .venv/bin/activate
+
 pip install -r requirements.txt
 playwright install chromium
-cp config.example.yaml config.yaml
+copy config.example.toml config.toml
 ```
 
-按需编辑 `config.yaml` 中的关键词与默认话术。
+按需编辑 `config.toml` 中的关键词与默认话术。
+
+> 说明：已移除 PyYAML。Windows + 较新 Python 上不再需要安装 Visual C++ Build Tools。
 
 ## 使用
 
@@ -64,7 +70,7 @@ python main.py run
 
 ## 配置说明
 
-`config.yaml` 要点：
+`config.toml` 要点：
 
 - `rules`：按顺序匹配，命中第一条即停
 - `default_replies`：未命中关键词时随机选一条
@@ -79,7 +85,7 @@ python main.py run
 ```
 douyin_auto_reply/
   main.py
-  config.example.yaml
+  config.example.toml
   src/
     config.py
     reply_engine.py
@@ -94,6 +100,7 @@ douyin_auto_reply/
 
 ## 故障排查
 
-1. **提示未登录** → 重新执行 `python main.py login`
-2. **找不到评论/会话节点** → 用有界面模式打开页面，对照 DOM 更新对应模块的 `SELECTORS`
-3. **私信入口打不开** → 手动在浏览器打开消息面板，或修改 `urls.messages`
+1. **PyYAML / Visual C++ 报错** → 拉取最新代码后只需 `pip install -r requirements.txt`（已无 PyYAML）
+2. **提示未登录** → 重新执行 `python main.py login`
+3. **找不到评论/会话节点** → 用有界面模式打开页面，对照 DOM 更新对应模块的 `SELECTORS`
+4. **私信入口打不开** → 手动在浏览器打开消息面板，或修改 `urls.messages`

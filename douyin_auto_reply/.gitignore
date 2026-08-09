@@ -1,4 +1,5 @@
 # Local secrets & runtime state
+config.toml
 config.yaml
 .playwright/
 data/

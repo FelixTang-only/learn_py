@@ -1,12 +1,21 @@
-"""Load and validate config.yaml."""
+"""Load and validate config.toml (stdlib tomllib, no PyYAML)."""
 
 from __future__ import annotations
 
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import yaml
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    try:
+        import tomli as tomllib  # type: ignore
+    except ImportError as exc:  # pragma: no cover
+        raise ImportError(
+            "Python 3.10 需要安装 tomli: pip install tomli"
+        ) from exc
 
 
 @dataclass
@@ -51,19 +60,22 @@ class AppConfig:
 
 def load_config(path: Path | str | None = None) -> AppConfig:
     root = Path(__file__).resolve().parent.parent
-    config_path = Path(path) if path else root / "config.yaml"
+    config_path = Path(path) if path else root / "config.toml"
     if not config_path.exists():
-        example = root / "config.example.yaml"
+        example = root / "config.example.toml"
         raise FileNotFoundError(
             f"缺少配置文件: {config_path}\n"
-            f"请先执行: cp {example.name} config.yaml 并按需修改"
+            f"请先复制示例配置: copy {example.name} config.toml\n"
+            f"(macOS/Linux: cp {example.name} config.toml)"
         )
 
-    with config_path.open("r", encoding="utf-8") as fh:
-        raw: dict[str, Any] = yaml.safe_load(fh) or {}
+    with config_path.open("rb") as fh:
+        raw: dict[str, Any] = tomllib.load(fh)
 
     rules: list[Rule] = []
     for item in raw.get("rules") or []:
+        if not isinstance(item, dict):
+            continue
         keywords = [str(k).strip() for k in (item.get("keywords") or []) if str(k).strip()]
         replies = [str(r).strip() for r in (item.get("replies") or []) if str(r).strip()]
         if keywords and replies:
@@ -73,7 +85,7 @@ def load_config(path: Path | str | None = None) -> AppConfig:
         str(r).strip() for r in (raw.get("default_replies") or []) if str(r).strip()
     ]
     if not default_replies:
-        raise ValueError("config.yaml 中 default_replies 不能为空")
+        raise ValueError("config.toml 中 default_replies 不能为空")
 
     delay = raw.get("action_delay_ms") or [800, 2000]
     if not isinstance(delay, list) or len(delay) < 2:

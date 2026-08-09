@@ -53,7 +53,7 @@ def cmd_run(
         do_comments = False
 
     if not do_comments and not do_messages:
-        logger.error("评论与私信均已禁用，请检查 config.yaml 或命令行参数")
+        logger.error("评论与私信均已禁用，请检查 config.toml 或命令行参数")
         return 2
 
     browser = BrowserManager(config)
@@ -104,7 +104,7 @@ def build_parser() -> argparse.ArgumentParser:
         "-c",
         "--config",
         default=None,
-        help="配置文件路径（默认: ./config.yaml）",
+        help="配置文件路径（默认: ./config.toml）",
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="调试日志")
     sub = parser.add_subparsers(dest="command", required=True)

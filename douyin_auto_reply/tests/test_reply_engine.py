@@ -1,4 +1,4 @@
-"""Unit tests for reply engine and store (no browser required)."""
+"""Unit tests for reply engine, store, and TOML config."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.config import AppConfig, Rule
+from src.config import AppConfig, Rule, load_config
 from src.reply_engine import ReplyEngine
 from src.store import ReplyStore
 
@@ -71,6 +71,14 @@ class ReplyStoreTests(unittest.TestCase):
             self.assertTrue(store.has_replied("a1", "comment"))
             self.assertFalse(store.has_replied("a1", "message"))
             store.close()
+
+
+class ConfigLoadTests(unittest.TestCase):
+    def test_load_example_toml(self) -> None:
+        cfg = load_config(ROOT / "config.example.toml")
+        self.assertGreaterEqual(len(cfg.rules), 1)
+        self.assertTrue(cfg.default_replies)
+        self.assertIn("comments", cfg.urls)
 
 
 if __name__ == "__main__":
